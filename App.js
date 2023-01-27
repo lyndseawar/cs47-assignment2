@@ -4,8 +4,11 @@ import { useFonts } from 'expo-font';
 import { Themes } from './assets/Themes';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import * as SplashScreen from 'expo-splash-screen';
+import { useCallback } from 'react';
+import themes from './assets/Themes/themes';
 import { Footer, Header, Body } from './app/components'
-
+SplashScreen.preventAutoHideAsync();
 
 
 /* This is the home screen used for the navigation system, we'll
@@ -66,6 +69,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: themes.light.bg,
   },
 });
