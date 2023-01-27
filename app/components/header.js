@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     width: windowWidth * 0.15,
   },
   title: {
-    fontFamily: "Sydney",
+    fontFamily: "SydneyBold",
     fontWeight: "bold",
     fontSize: 32,
   },
