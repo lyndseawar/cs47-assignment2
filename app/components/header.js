@@ -2,7 +2,7 @@ import { View, Text, Image, StyleSheet, Dimensions } from "react-native";
 import Icons from "../../assets/Icons";
 
 const windowWidth = Dimensions.get("window").width;
-const windowHeight = Dimensions.get("window").height;
+
 
 const Header = () => {
   return (
