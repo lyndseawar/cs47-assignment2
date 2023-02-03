@@ -1,5 +1,4 @@
-#Made edits to the starter code to ensure
-#it looks like the outlined objectives in the spec
+**Made edits to the starter code to ensure it looks like the outlined objectives in the spec**
 
 # Starter repo for A2
 ## Steps to get started:
