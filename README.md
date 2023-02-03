@@ -1,3 +1,6 @@
+#Made edits to the starter code to ensure
+#it looks like the outlined objectives in the spec
+
 # Starter repo for A2
 ## Steps to get started:
  1. Download/clone the repo. Either by using git:
