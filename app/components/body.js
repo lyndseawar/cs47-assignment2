@@ -10,12 +10,15 @@ import {
 import Icons from "../../assets/Icons";
 import Profiles from "../../assets/Profiles";
 
+const screenWidth = Dimensions.get("window").width;
+const screenHeight = Dimensions.get("window").height;
+
 const Body = () => {
   return (
     <View style={[styles.body, styles.shadowProp]}>
       <ImageBackground
         source={Profiles.taylorswift.image}
-        style={styles.image}
+        style={[styles.image]}
         imageStyle={styles.imageStyle}
       >
         <Text style={styles.text}>{Profiles.taylorswift.name}</Text>
@@ -23,7 +26,9 @@ const Body = () => {
       </ImageBackground>
 
       <View style={styles.audioContainer}>
-        <Text style={styles.hottake}>My hottest take</Text>
+        <View style={styles.hottakeContainer}>
+          <Text style={styles.hottake}>My hottest take</Text>
+        </View>
         <View style={styles.container}>
           <Image style={styles.playbutton} source={Icons.player.light} />
           <Image style={styles.audioWave} source={Icons.audioWave.light} />
@@ -32,15 +37,15 @@ const Body = () => {
     </View>
   );
 };
+const { height, width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   image: {
-    width: "100%",
-    height: undefined,
+    width: width * 0.93,
+    height: height * 0.51,
     aspectRatio: 1 / 1.1,
     justifyContent: "space-between",
     alignItems: "left",
-    borderRadius: 8,
   },
   imageStyle: {
     borderRadius: 10,
@@ -61,6 +66,8 @@ const styles = StyleSheet.create({
   },
   body: {
     padding: 15,
+    flex: 1,
+    position: "relative",
   },
   shadowProp: {
     shadowColor: "171717",
@@ -86,15 +93,20 @@ const styles = StyleSheet.create({
   hottake: {
     textAlign: "center",
     fontFamily: "Sydney",
-    fontSize: 24,
+    fontSize: 28,
     alignSelf: "flex-start",
   },
+  hottakeContainer: {
+    height: height * 0.05,
+    justifyContent: "center",
+  },
   audioContainer: {
+    flex: 1,
     flexDirection: "column",
     backgroundColor: "white",
     borderRadius: 10,
     padding: 10,
-    marginTop: 10,
+    marginTop: 23,
   },
 });
 

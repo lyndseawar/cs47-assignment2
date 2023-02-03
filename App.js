@@ -19,7 +19,7 @@ function HomeScreen() {
     <SafeAreaView style={styles.container}>
       <Header />
       <Body />
-      <Footer />
+  
     </SafeAreaView>
   );
 
